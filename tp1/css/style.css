@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    font-style: normal;
+}
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius:0px 0px 20px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
+h1
+{
+    color: white !important;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;}
+footer{
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+
+}
+nav a{
+    width: 50%;
+}
+
+.logo_container{
+    width: 38%;
+    height: 50%;
+    margin-left: 33px;   
+}
+.logo{
+    width: 10%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 2%;
+}
+.container_main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.container_left{
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    text-align: justify;
+}
+.container_left h2{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+.container_left p{
+    line-height: 23px;
+}
+.container_right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_right img{
+    width: 60%;
+    height: 80%;
+    border-radius: 100px;
+}
+.image:hover{
+    transform: scale(1.1);
+    transition: 1s ease;
+    filter: grayscale(100%);
+}
+.container_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.container_footer_left{
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+.container_footer_right{
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+.section2{
+   padding-bottom: 55px;
+   height: 50%;
+}
