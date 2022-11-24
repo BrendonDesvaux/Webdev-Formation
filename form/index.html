@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/6ptXS7Jv/medusa.png" />
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <main class="container">
+        <h2><span>Formulaire de</span>contact</h2>
+        <!-- Box -->
+        <div class="box">
+            <!-- info container -->
+            <section class="info">
+                <div class="pp">
+                    <img width="100%" src="https://avatars.githubusercontent.com/u/78964703?s=400&v=4" alt="photo de profil">
+                </div>
+                <h4>Desvaux Brendon</h4>
+                <p>
+                    <i class="fas fa-road"></i>
+                    <small>Adresse</small>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="telto:0300000000"><small>0X XX XX XX XX</small></a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:adressemail@gmail.com"><small>adressemail@gmail.com</small></a>
+                </p>
+            </section>
+            <!-- form container -->
+            <h3>Contactez moi</h3>
+            <form action="index.html" method="get">
+                <!-- Name -->
+                <div class="name">
+                    <label for="name">Nom</label>
+                    <br>
+                    <input type="text" id="name" required>
+                </div>
+                <!-- Company -->
+                <div class="company">
+                    <label for="company">Entreprise</label>
+                    <br>
+                    <input type="text" id="company" required>
+                </div>
+                <!-- Email -->
+                <div class="email">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" required>
+                </div>
+                <!-- Telephone -->
+                <div class="tele">
+                    <label for="telephone">Téléphone</label>
+                    <br>
+                    <input type="tel" id="telephone" required>
+                </div>
+                <!-- Message -->
+                <div class="message">
+                    <label for="message">Message</label>
+                    <br>
+                    <textarea id="message" required></textarea>
+                </div>
+                <!-- Submit -->
+                <div class="submit">
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
