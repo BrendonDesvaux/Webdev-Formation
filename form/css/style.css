@@ -63,7 +63,7 @@
   }
   img:hover{
     transform: scale(1.1);
-    transition: 0.2s ease-in-out;
+    transition: 0.8s ease-in-out;
   }
   html body .container .box h3 {
     background: #efefef;
@@ -138,7 +138,7 @@
     }
     html body .container .box {
       grid-template-columns: 1fr 2fr;
-      border-radius: 15px;
+      border-radius: 10px;
     }
     html body .container .box .info {
       grid-row: 1/3;
