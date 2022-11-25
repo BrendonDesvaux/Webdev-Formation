@@ -17,13 +17,18 @@ section{
     display:flex;
     align-items:center;
     justify-content:center;
-  }
+}
   
-  section div{
+section div{
     margin:10px;
-    width:10%;
-    height:10%;
+    width:200px;
+    height:200px;
     display:flex;
     align-items:center;
     justify-content:center;
-  }
+}
+span{
+    width: 30%;
+    height: 30%;
+    line-height: 60px;
+}
