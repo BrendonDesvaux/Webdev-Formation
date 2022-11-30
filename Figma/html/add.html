@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/add.css">
+    <title>Instagrave</title>
+</head>
+<body>
+    <section class="nav-top">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html"><img width="100%" height="100%" src="img/Logo.png" alt="logo"></a>
+            </div>
+            <div class="titre">
+                <a href="index.html"><h1>Instagrave</h1></a>
+            </div>
+            <div class="add">
+                <a href="index.html"><img src="img/icons8-cancel.gif" width="100%" height="100%" alt="Bouton fermer"></a>
+            </div>
+        </nav>
+    </section>
+    <section class="main">
+        <h1>UPLOAD CONTENT</h1>
+            <form action="add.php" method="post">
+                <label for="name">Nom de la video</label>
+                <input class="inpute" type="text" name="name" id="name" placeholder="ex: Clikoput title">
+                <br>
+                <div class="file">
+                    <label for="file-input">Upload Video</label>
+                    <input type="file" accept=".jpg,.jpeg.,.gif,.png,.mov,.mp4" id="file-input"/>
+                </div>
+                <br>
+                <label for="filters">Filters</label>
+                <div class="filters">
+                    <div class="fil">
+                        <img src="img/sun.gif" alt="luminosité">
+                    </div>
+                    <div class="fil">
+                        <img src="img/brightness.gif" alt="contraste">
+                    </div>
+                    <div class="fil">
+                        <img src="img/icons8-dew-point.gif" alt="Drip color">
+                    </div>
+                    <div class="fil">
+                        <img src="img/add.gif" alt="Plus">
+                    </div>
+                </div>
+                <br>
+                <label for="hashtags">#hashtags</label>
+                <input class="inpute" type="text" name="hashtags" id="hashtags" placeholder="use coma between tag">
+                <br>
+                <button href="#" class="bottom_btn">Upload</button>
+            </form>
+         
+    </section>
+    <section class="footer-bot">
+        <div class="bubble_placement">
+            <a href="profil.html"><img width="100%" height="100%" src="img/Ilmatoumy_Deadman_Wonderland.png" alt="Bouton profil"></a>
+        </div>
+    </section>
+    <script src="js/addfile.js"></script>
+</body>
+</html>
