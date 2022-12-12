@@ -1,5 +1,5 @@
 //create a random nomber between 1 and 5
-var nbEtoiles = Math.floor(Math.random() * 5) + 1;
+var nbEtoiles = Math.round(Math.random() * 5) + 1;
 
 //user need to guess the number
 var nbEtoilesUser = prompt("Saisir un nombre d'étoiles");
