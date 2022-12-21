@@ -9,6 +9,5 @@ while (nbEtoiles < 1 || nbEtoiles >= 11) {
 }
 
 //Affichez étoiles
-for (let i = 1; i <= nbEtoiles; i++) {
-    console.log("*".repeat(nbEtoiles));
-}
+
+console.log("*".repeat(nbEtoiles));

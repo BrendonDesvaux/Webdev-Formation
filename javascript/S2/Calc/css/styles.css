@@ -20,7 +20,12 @@
     padding: 10px;
     font-size: 30px;
     line-height: 90px;
-    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.window::-webkit-scrollbar {
+    display: none;
 }
 
 .keypad {

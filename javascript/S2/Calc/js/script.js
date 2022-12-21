@@ -267,3 +267,91 @@ keysEls[18].addEventListener("click", function() {
     back_space();
     percent_on = false;
 });
+
+//Keyboard using event listener
+//check if keypad number is pressed
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode >= 96 && event.keyCode <= 105) {
+        if (clearAfterEqual === false) {
+            displayEl.innerHTML += event.key;
+            percent_on = false;
+        } else {
+            displayEl.innerHTML = event.key;
+            clearAfterEqual = false;
+            percent_on = false;
+        }
+    }
+    //if the key pressed is not a number, then check if it is an operator key.
+    else if (event.keyCode === 107 || event.keyCode === 109 || event.keyCode === 106 || event.keyCode === 111) {
+        if (event.keyCode === 107) {
+            calc_process("+");
+        } else if (event.keyCode === 109) {
+            calc_process("-");
+        } else if (event.keyCode === 106) {
+            calc_process("×");
+        } else if (event.keyCode === 111) {
+            calc_process("÷");
+        }
+        percent_on = false;
+    }
+    //if the key pressed is not a number or an operator key, then check if it is a decimal key.
+    else if (event.keyCode === 110) {
+        if (clearAfterEqual === false) {
+            if (displayEl.innerHTML === "") {
+                displayEl.innerHTML = "0.";
+                clearAfterEqual = false;
+            } else //If not, then check below if the string ends with an operator sign like "+ ". 
+            if (displayEl.innerHTML.slice(-2) === "+ " || displayEl.innerHTML.slice(-2) === "- " || displayEl.innerHTML.slice(-2) === "× " || displayEl.innerHTML.slice(-2) === "÷ ") {
+                displayEl.innerHTML = displayEl.innerHTML + "0.";
+            } else //if the above does not apply, then check if it can find find any non numeric characters (looking for an operator sign). If a sign is found, then add "."
+            if (displayEl.innerHTML.match(/[^0-9.]/g)) {
+                equation_allPrt = displayEl.innerHTML;
+                num2_str = displayEl.innerHTML.substring(equation_firstPrt.length, equation_allPrt.length);
+                if (num2_str.indexOf(".") === -1) {
+                    displayEl.innerHTML = displayEl.innerHTML + ".";
+                }
+            } else { //if all the above does not apply then, it must be just a number. In this case, just add ".".   
+                if (displayEl.innerHTML.indexOf(".") === -1) {
+                    displayEl.innerHTML = displayEl.innerHTML + ".";
+                }
+            }
+        } else {
+            displayEl.innerHTML = "0.";
+            clearAfterEqual = false;
+        }
+        percent_on = false;
+    }
+    //if the key pressed is not a number, operator key or decimal key, then check if it is a clear key.
+    else if (event.keyCode === 8) {
+        back_space();
+        percent_on = false;
+    }
+    //if the key pressed is not a number, operator key, decimal key or clear key, then check if it is a clear_entry key.
+    else if (event.keyCode === 46) {
+        clear_entry();
+        percent_on = false;
+    }
+    //if the key pressed is not a number, operator key, decimal key, clear key or clear_entry key, then check if it is an equal key.
+    else if (event.keyCode === 13) {
+        calc_process("=");
+        percent_on = false;
+    }
+    //if the key pressed is not a number, operator key, decimal key, clear key, clear_entry key or equal key, then check if it is a percent key.
+    else if (event.keyCode === 80) {
+        percent_on = true;
+        percent();
+    }
+    //if the key pressed is not a number, operator key, decimal key, clear key, clear_entry key, equal key or percent key, then check if it is a enter key.
+    else if (event.keyCode === 93) {
+        clear_all();
+        percent_on = false;
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+        displayEl.innerHTML = "";
+        num1 = 0;
+        percent_on = false;
+    }
+});
