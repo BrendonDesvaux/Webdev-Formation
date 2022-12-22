@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site d'entrainement bootstrap'">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../3rdParties/turnjs4/samples/basic/css/basic.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <title>Red Wire</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-custom navbar-mainbg">
+            <a class="navbar-brand navbar-logo" href="#"><img src="../img/RW-Logo.png" alt="logo entreprise" width="30%"></a>
+            <div class="flexu">
+                <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <div class="hori-selector">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Lecture</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Modification</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Vertical navbar -->
+        <div class="vertical-nav bg-dark" id="sidebar">
+            <div class="py-4 px-3 mb-4 bg-dark">
+                <div class="media-body">
+                    <img class="mb-0" src="../img/RW-Logo.png" width="80%">
+                    <p class="font-weight-grey text-muted mb-0">Feel the red.</p>
+                </div>
+            </div>
+
+            <p class="text-white font-weight-bold text-uppercase px-3 small pb-4 mb-0">Gallery</p>
+
+            <ul class="nav flex-column bg-dark mb-0">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light font-italic bg-dark">
+                        <i class="fa fa-th-large mr-3 text-danger fa-fw"></i> Mes creations
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light font-italic">
+                        <i class="fa fa-address-card mr-3 text-danger fa-fw"></i> Creation du peuple
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light font-italic">
+                        <i class="fa fa-cubes mr-3 text-danger fa-fw"></i> Must read
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-danger fa-fw"></i> Surprise
+                    </a>
+                </li>
+            </ul>
+
+            <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Options</p>
+
+            <ul class="nav flex-column bg-dark mb-0">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light font-italic">
+                        <i class="fa fa-area-chart mr-3 text-danger fa-fw"></i> Moi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light font-italic">
+                        <i class="fa fa-bar-chart mr-3 text-danger fa-fw"></i> Mes livres
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light font-italic">
+                        <i class="fa fa-pie-chart mr-3 text-danger fa-fw"></i> Une idée
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light font-italic">
+                        <i class="fa fa-line-chart mr-3 text-danger fa-fw"></i> Une autre
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End vertical navbar -->
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-dark bg-dark rounded-pill shadow-sm mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold"></small><i class="fa fa-arrow-right" id="tog"></i></button>
+            <div id="flipbook">
+                <div class="hard">
+                    <h1>TITRE RANDOM</h1>
+                </div>
+                <div class="hard"></div>
+                <div class="page">
+                    <H3>A new story begins</H3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In vel impedit architecto facere dignissimos soluta ea, nulla, dolor asperiores accusantium quis, tenetur veniam hic similique adipisci vitae consequatur facilis maxime nam sint
+                        alias eligendi. Commodi ipsum quos sapiente minus animi explicabo debitis incidunt id laboriosam autem ad, dignissimos laudantium saepe voluptas vero cupiditate deleniti. Nesciunt beatae aliquid similique fugit eos numquam incidunt
+                        labore, commodi neque accusamus inventore, autem est! Blanditiis, distinctio non? Doloribus qui vel quae. Officia quidem sit, fugit voluptate error fuga eaque repellat, ea incidunt obcaecati, nobis voluptatum. Eaque illo cum explicabo
+                        hic recusandae tenetur! Dignissimos optio officia magnam ipsum itaque quia expedita dolor tempora, iusto corrupti minima earum distinctio iure consequuntur nesciunt doloremque repudiandae saepe totam tempore! Quia aliquam doloribus,
+                        accusamus libero deleniti voluptatibus laudantium in odio fugit rem molestiae, hic, perferendis veniam.</p>
+                    <span>1</span>
+                </div>
+                <div> Page 2 </div>
+                <div> Page 3 </div>
+                <div> Page 4 </div>
+                <div class="hard"></div>
+                <div class="hard"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../3rdParties/turnjs4/lib/turn.min.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
