@@ -18,5 +18,5 @@ if ((mozardDay < 0) || (mozardDeathDay <= 0)) {
     mozardDay = 31 + mozardDay;
     mozardDeathDay = 31 + mozardDeathDay;
 }
-console.log('Mozart est mort a ' + mozardAge + ' ans, ' + mozardDeathMonth + ' mois et ' + mozardDeathDay + ' jours');
-console.log('Mozart aurait eu ' + MozardActualAge + ' ans, ' + mozardMonth + ' mois et ' + mozardDay + ' jours' + ' aujourd\'hui');
+console.log(`Mozart est mort a ${mozardAge} ans, ${mozardDeathMonth} mois et ${mozardDeathDay} jours`);
+console.log(`Mozart aurait eu ${MozardActualAge} ans, ${mozardMonth} mois et ${mozardDay} jours aujourd'hui`);
