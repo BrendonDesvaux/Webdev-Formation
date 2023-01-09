@@ -1,0 +1,11 @@
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#contenu {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: none;
+    background-color: blue;
+}
