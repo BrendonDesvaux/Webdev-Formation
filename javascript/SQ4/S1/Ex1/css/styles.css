@@ -1,0 +1,17 @@
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#chargement {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: red;
+}
+
+#contenu {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: none;
+    background-color: blue;
+}
