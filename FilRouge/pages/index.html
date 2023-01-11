@@ -16,39 +16,17 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-custom navbar-mainbg">
-            <a class="navbar-brand navbar-logo" href="#"><img src="../img/RW-Logo.png" alt="logo entreprise" width="30%"></a>
-            <div class="flexu">
-                <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars text-white"></i>
-            </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <div class="hori-selector">
-                            <div class="left"></div>
-                            <div class="right"></div>
-                        </div>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Lecture</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Modification</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
         <!-- Vertical navbar -->
         <div class="vertical-nav bg-dark" id="sidebar">
-            <div class="py-4 px-3 mb-4 bg-dark">
-                <div class="media-body">
-                    <img class="mb-0" src="../img/RW-Logo.png" width="80%">
-                    <p class="font-weight-grey text-muted mb-0">Feel the red.</p>
-                </div>
-            </div>
 
+            <a href="index.html">
+                <div class="py-4 px-3 mb-4 bg-dark">
+                    <div class="media-body">
+                        <img class="mb-0" src="../img/logo.png" width="80%">
+                        <p class="font-weight-grey text-muted mb-0">Feel the red.</p>
+                    </div>
+                </div>
+            </a>
             <p class="text-white font-weight-bold text-uppercase px-3 small pb-4 mb-0">Gallery</p>
 
             <ul class="nav flex-column bg-dark mb-0">
@@ -58,7 +36,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-light font-italic">
+                    <a href="galery.html" class="nav-link text-light font-italic">
                         <i class="fa fa-address-card mr-3 text-danger fa-fw"></i> Creation du peuple
                     </a>
                 </li>
@@ -100,30 +78,107 @@
             </ul>
         </div>
         <!-- End vertical navbar -->
-
+    </header>
+    <main>
         <!-- Page content holder -->
         <div class="page-content p-5" id="content">
             <!-- Toggle button -->
             <button id="sidebarCollapse" type="button" class="btn btn-dark bg-dark rounded-pill shadow-sm mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold"></small><i class="fa fa-arrow-right" id="tog"></i></button>
-            <div id="flipbook">
-                <div class="hard">
-                    <h1>TITRE RANDOM</h1>
+            <!-- book holder -->
+            <div id="wrapper">
+                <div id="container">
+
+                    <section class="open-book">
+                        <header>
+                            <h1>livre intitulé</h1>
+                            <h6>Desvaux Henault Brendon</h6>
+                        </header>
+                        <article>
+                            <h2 class="chapter-title">Titre du livre</h2>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, hic deserunt. Quo repudiandae quam tempora quisquam dolorum autem aliquid mollitia.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur excepturi minima reprehenderit assumenda asperiores totam ratione cupiditate. Esse distinctio vitae eos at necessitatibus qui nihil, est sed et quaerat expedita omnis assumenda, porro
+                                veniam nam optio commodi repudiandae saepe?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum sunt atque ipsa veritatis nisi nihil quos repudiandae, dolorum minus consequuntur eius, eos ipsum expedita ducimus ipsam dolorem nam provident recusandae?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia doloremque laboriosam, cumque pariatur facere voluptatibus, odit incidunt alias, tempore nostrum autem tempora accusamus quis aut sunt quae modi iste quidem?
+                            </p>
+                            <p>
+                                To <a href="https://codepen.io/">CodePen.io</a> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt omnis perspiciatis aspernatur quidem vel in eaque blanditiis, iste minima unde. Suscipit sequi consectetur
+                                beatae nobis recusandae et vitae expedita error?.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, numquam. Nulla nihil repudiandae praesentium temporibus aut, qui incidunt a nobis. Quia voluptatibus natus laborum quis mollitia distinctio quasi qui eum?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae consequatur officiis illo earum harum, excepturi possimus eius tenetur dolorem dolore id! Est ipsam eligendi, mollitia eum laborum tempore ab sit.
+                            </p>
+                            <dl>
+                                <dt><strong>skeu&bull;o&bull;morph</strong></dt>
+                                <dd>
+                                    <em>noun</em><br> an object or feature that imitates the design of a similar artifact made from another material.
+                                </dd>
+                            </dl>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia eaque maiores voluptate minus atque, ad autem quod deleniti excepturi iusto magni quaerat odio. Molestias necessitatibus perspiciatis nesciunt hic nemo!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, aspernatur.
+                            </p>
+                            <ul>
+                                <li>Serif typefaces</li>
+                                <li>
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nostrum.</em>.
+                                </li>
+                                <li>An adorned chapter title</li>
+                                <li>A dropcap for the first letter of the first paragraph of the chapter</li>
+                                <li>Indented paragraphs</li>
+                                <li>Page numbers</li>
+                            </ul>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit possimus explicabo sapiente facere blanditiis ipsam.
+                            </p>
+                            <ul>
+                                <li>
+                                    "What if highlighting the text actually looked <mark>like a highlighter</mark>?"
+                                    <ul>
+                                        <li>"What if I wanted it to be <mark class="pink">pink</mark>?"</li>
+                                        <li>"<mark class="blue">Blue</mark>?"</li>
+                                        <li>"<mark class="green">Green</mark>?"</li>
+                                        <li>"<mark class="orange">Orange</mark>?"</li>
+                                    </ul>
+                                </li>
+                                <li>"What if I found <s>a typo</s><sup>an error in the content</sup> and wanted to make a correction?"</li>
+                                <li>"What if I was viewing this on mobile&mdash;"</li>
+                            </ul>
+                            <p>
+                                The true obstacle showed its form. Responsiveness. How on Earth will he makes this work?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum dignissimos cumque quas non est fugiat voluptas pariatur, eos dolor quis corporis, eligendi unde tempora! Quas earum repudiandae sequi hic saepe soluta. Quis, delectus voluptates? Minus,
+                                iusto. Sit harum pariatur libero nulla hic tempore culpa consectetur quod. Atque vitae nisi recusandae!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ea quod rerum voluptates, asperiores soluta, neque quae quia repellendus totam nam, ratione aliquid voluptatum quo!
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, facere.
+                            </p>
+                        </article>
+                        <footer>
+                            <ol id="page-numbers">
+                                <li>1</li>
+                                <li>2</li>
+                            </ol>
+                        </footer>
+                    </section>
+
                 </div>
-                <div class="hard"></div>
-                <div class="page">
-                    <H3>A new story begins</H3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In vel impedit architecto facere dignissimos soluta ea, nulla, dolor asperiores accusantium quis, tenetur veniam hic similique adipisci vitae consequatur facilis maxime nam sint
-                        alias eligendi. Commodi ipsum quos sapiente minus animi explicabo debitis incidunt id laboriosam autem ad, dignissimos laudantium saepe voluptas vero cupiditate deleniti. Nesciunt beatae aliquid similique fugit eos numquam incidunt
-                        labore, commodi neque accusamus inventore, autem est! Blanditiis, distinctio non? Doloribus qui vel quae. Officia quidem sit, fugit voluptate error fuga eaque repellat, ea incidunt obcaecati, nobis voluptatum. Eaque illo cum explicabo
-                        hic recusandae tenetur! Dignissimos optio officia magnam ipsum itaque quia expedita dolor tempora, iusto corrupti minima earum distinctio iure consequuntur nesciunt doloremque repudiandae saepe totam tempore! Quia aliquam doloribus,
-                        accusamus libero deleniti voluptatibus laudantium in odio fugit rem molestiae, hic, perferendis veniam.</p>
-                    <span>1</span>
-                </div>
-                <div> Page 2 </div>
-                <div> Page 3 </div>
-                <div> Page 4 </div>
-                <div class="hard"></div>
-                <div class="hard"></div>
             </div>
         </div>
     </main>
