@@ -7,9 +7,19 @@ $('input').change(function() {
     if ($("#long").val() != "" && $("#larg").val() != "") {
         let rectangle = new Rectangle(width, height);
         $("#result").html("Rectangle Surface: " + rectangle.surface + " Perimeter: " + rectangle.perimeter);
-    }
-    if ($("#radius").val() != "") {
         let circle = new Circle(width);
         $("#result2").html("Circle Surface: " + circle.getArea() + " Perimeter: " + circle.getPerimeter());
+    }
+
+    if ($("#long").val() <= 0) {
+        $("#long").val(1);
+    }
+    //if value of larg is negative, set it to 0
+    if ($("#larg").val() <= 0) {
+        $("#larg").val(1);
+    }
+    //if value of radius is negative, set it to 0
+    if ($("#radius").val() <= 0) {
+        $("#radius").val(1);
     }
 });

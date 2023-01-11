@@ -1,4 +1,6 @@
 class Animal {
+    name;
+    spacies;
     constructor(name, spacies) {
         this.name = name;
         this.spacies = spacies;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class ex3 JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <script src="js/stagiaire.js"></script>
+    <script src="js/classe.js"></script>
+    <script src="js/stage.js"></script>
+    <script src="js/script.js" defer></script>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="classes"></div>
+    <form name="classeCreation" action="">
+        <label for="nom">Nom de la classe</label>
+        <input type="text" name="nom" id="nom">
+        <label for="debut">Date de début</label>
+        <input type="date" name="debut" id="debut">
+        <label for="fin">Date de fin</label>
+        <input type="date" name="fin" id="fin">
+        <input type="button" value="Créer la classe" id="creerClasse">
+        <input type="button" value="Créer un stage" id="creerStage">
+        <input type="button" value="print dans console" id="consoleCreation">
+    </form>
+    <div id="stages"></div>
+    <section id="stagiaire">
+        <div>
+            <div style="display: flex; align-items: center; justify-content: center; ">
+                <h2>Stagiaires</h2><button id="addStag" style=" margin-left: 2%; border: solid 1px black; border-radius: 50%; width: 2%; display: flex; align-items: center; justify-content: center;">+</button>
+            </div>
+            <div style="" class="stagi">
+
+            </div>
+            <form style="display: none;" name="stagiaireCreation" action="" id="formStag">
+                <label for="nomStagiaire">Nom du stagiaire</label>
+                <input type="text" name="nomStagiaire" id="nomStagiaire">
+                <label for="prenomStagiaire">Prénom du stagiaire</label>
+                <input type="text" name="prenomStagiaire" id="prenomStagiaire">
+                <label for="dateNaissance">Date de naissance</label>
+                <input type="date" name="dateNaissance" id="dateNaissance">
+                <input type="button" value="Créer le stagiaire" id="creerStagiaire">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

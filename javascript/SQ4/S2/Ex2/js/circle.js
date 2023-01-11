@@ -1,11 +1,12 @@
 class Circle {
+    radius;
     constructor(radius) {
         this.radius = radius;
     }
     getArea() {
-        return Math.PI * this.radius * this.radius;
+        return Math.round(Math.PI * this.radius ** 2);
     }
     getPerimeter() {
-        return 2 * Math.PI * this.radius;
+        return Math.round(2 * Math.PI * this.radius);
     }
 }

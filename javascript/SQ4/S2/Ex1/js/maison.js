@@ -1,4 +1,9 @@
 class Maison {
+    numeroRue;
+    typeVoie;
+    nomVoie;
+    codePostal;
+    ville;
     constructor(numeroRue, typeVoie, nomVoie, codePostal, ville) {
         this.numeroRue = numeroRue;
         this.typeVoie = typeVoie;
