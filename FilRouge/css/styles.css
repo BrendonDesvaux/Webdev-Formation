@@ -527,13 +527,20 @@ a:hover {
     padding: 1em 0;
 }
 
+#sidebarCollapse {
+    z-index: 10;
+    position: fixed;
+}
+
 
 /*** MEDIA QUERIES ***/
 
 @media only screen and ( min-width: 50em) {
     .open-book {
         margin: 1em;
-        position: relative;
+        position: absolute;
+        bottom: 2%;
+        top: 2%;
     }
     .open-book:before {
         background-color: #8B4513;
