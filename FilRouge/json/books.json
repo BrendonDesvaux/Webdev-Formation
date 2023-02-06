@@ -1,0 +1,31 @@
+{
+    "books": [{
+            "title": "Harry Potter",
+            "author": "JK Rowling",
+            "pages": 400,
+            "chapterTitle": "The Sorcerer's Stone",
+            "chapterContent": "Harry Potter is a wizard.",
+            "resume": "Stark died in the first book."
+
+        },
+        {
+            "title": "The Hobbit",
+            "author": "JRR Tolkien",
+            "pages": 300,
+            "chapterTitle": "An Unexpected Party",
+            "chapterContent": "Bilbo Baggins is a hobbit. Bilbo Baggins is a bad hobbit. Ce chapitre voit l’apparition de l’ensemble des héros du Hobbit. Bilbo tout d’abord, éminent représentant de l’espèce des Hobbits, puis vient Gandalf le Magicien à la recherche d’un hobbit prêt à partir à l’aventure. Ce que refuse d’emblée Bilbo : un hobbit est d’ordinaire casanier et ne saurait partir à l’aventure… Malgré cela, ce ne sont pas moins de treize nains qui vinrent frapper à la porte de Bilbo. Ils s’appelaient Dori, Nori, Ori, Oin, Gloin, Fili, Kili, Bombur, Bifur, Bofur, Dwalin, Balin et Thorin Lécudechesne. Ce dernier était leur chef, fils de Thrain fils de Thror, héritier du Royaume Nain sous la Montagne. Tous s’étaient présentés sur les indications discrètes de Gandalf et s’invitèrent par la même occasion à un solide repas, au grand désarroi de Bilbo qui vit ses garde-manger se vider de toutes leurs réserves. Thorin raconta l’histoire de sa Maison et comment un jour maudit un gigantesque dragon, peut-être attiré par les richesses légendaires de sa famille, attaqua leur royaume. De nombreux nains moururent ce jour-là et lui-même ne survécut que grâce à la chance. Depuis Smaug veille sur le trésor et nul dans la région ne peut lui contester Le père de Thorin, Thror, survécut ainsi que son grand-père, Thrain. Il fut malheureusement tué plus tard dans les mines de la Moria. Quant à Thorin, il était porté disparu depuis près de cent ans maintenant. Le repas terminé, Gandalf confia à Thorin une carte ainsi qu’une clef. Cette dernière provenait de Thror qui l’avait confié à Gandalf alors qu’il était prisonnier du Nécromancien. Thror avait perdu l’esprit et sa seule obsession avait été de donner les objets à Gandalf. Là mourut Thror tandis que Gandalf ne put s’échapper que de justesse. La carte et la clef devaient permettre d’accéder à une porte dérobée. Ainsi ils pourraient tromper la vigilance de Smaug car le but de toute la troupe était en effet de reconquérir le trésor et le Royaume de Thorin ! Le rôle de Bilbo consistait à exercer son art de la cambriole (là aussi, Gandalf aura suggéré que Bilbo était un spécialiste du genre…) pour les aider à récupérer le trésor. Une mission de Bilbo déclina avec force !",
+            "resume": "Bilbo Baggins is a bad hobbit.  "
+
+        },
+        {
+            "title": "The Lord of the Rings",
+            "author": "JRR Tolkien",
+            "pages": 500,
+            "chapterTitle": "The Fellowship of the Ring",
+            "chapterContent": "Frodo Baggins is a hobbit.",
+            "resume": "Frodo Baggins is a good hobbit."
+
+        }
+
+    ]
+}

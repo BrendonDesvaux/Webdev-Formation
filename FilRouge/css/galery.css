@@ -91,7 +91,7 @@
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 848px) {
     .list-inline {
         display: grid;
         grid-template-columns: 1fr;

@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="bubble_default__body">
                     <div class="bubble_default__body__content__image">
-                        <img src="./../img/Ilmatoumy_Deadman_Wonderland_2.png" alt="Avatar">
+                        <img src="img/Ilmatoumy_Deadman_Wonderland_2.png" alt="Avatar">
                     </div>
                     <div class="bubble_default__body__content__texte">
                         <ul>
@@ -205,13 +205,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div class="tab-panel__content">
                                 <div class="tab-panel__content__item">
-                                    <img src="./../img/bookc.png" alt="book1">
+                                    <img src="img/bookc.png" alt="book1">
                                 </div>
                                 <div class="tab-panel__content__item">
-                                    <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y" alt="Avatar">
+                                    <img src="img/book2.png" alt="Avatar">
                                 </div>
                                 <div class="tab-panel__content__item">
-                                    <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y" alt="Avatar">
+                                    <img src="img/book3.png" alt="Avatar">
                                 </div>
                                 <div class="tab-panel__content__item">
                                     <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y" alt="Avatar">

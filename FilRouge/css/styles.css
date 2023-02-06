@@ -7,6 +7,10 @@ body {
     overflow-y: scroll !important;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
 i {
     margin-right: 10px;
 }
@@ -381,9 +385,7 @@ a:hover {
     text-transform: uppercase;
 }
 
-.open-book footer {
-    padding-top: 1em;
-}
+.open-book footer {}
 
 .open-book footer #page-numbers {
     display: none;
@@ -435,6 +437,8 @@ a:hover {
 
 .open-book article {
     line-height: 1.5;
+    width: 100%;
+    height: 78vh;
 }
 
 .open-book article *:not(.chapter-title):not(hr):not(dl) {
@@ -532,6 +536,10 @@ a:hover {
     position: fixed;
 }
 
+.text-page-chapter {
+    max-height: 50vh;
+}
+
 
 /*** MEDIA QUERIES ***/
 
@@ -572,9 +580,7 @@ a:hover {
     }
     /* Header/Footer */
     .open-book header:before,
-    .open-book header:after,
-    .open-book footer:before,
-    .open-book footer:after {
+    .open-book header:after {
         background: #fff;
         border-radius: 25%;
         content: '';
@@ -740,6 +746,10 @@ a:hover {
     overflow: auto;
 }
 
+.bubble_default__internal::-webkit-scrollbar {
+    display: none;
+}
+
 .bubble_default__header {
     padding: 0;
     margin: 0;
@@ -837,13 +847,17 @@ a:hover {
     overflow: scroll;
 }
 
+.tab-panel__content::-webkit-scrollbar {
+    display: none;
+}
+
 .tab-panel__content__item {
     width: 9%;
 }
 
 .tab-panel__content__item img {
     width: 100%;
-    height: 100%;
+    height: 10rem;
 }
 
 @media screen and (max-width: 767px) {

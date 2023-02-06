@@ -19,7 +19,7 @@
     <header>
         <!-- Vertical navbar -->
         <div class="vertical-nav bg-dark" id="sidebar">
-            <a href="index.html">
+            <a href="../index.php">
                 <div class="py-4 px-3 mb-4 bg-dark">
                     <div class="media-body ">
                         <img class="mb-0" src="../img/logo.png" width="80%">
@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="galery.html" class="nav-link text-light font-italic">
+                    <a href="galery.php" class="nav-link text-light font-italic">
                         <i class="fa fa-address-card mr-3 text-danger fa-fw"></i> Creation du peuple
                     </a>
                 </li>
