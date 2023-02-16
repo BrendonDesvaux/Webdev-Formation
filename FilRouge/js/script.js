@@ -13,162 +13,162 @@ $(function() {
 /*----------------début-bubble--------------------*/
 document.addEventListener('DOMContentLoaded', function() {
 
-    var bpop = {
-        // As the name says, it starts on init
-        init: function() {
-            //Render the dom for the app
-            this.renderDom()
-                //Cache the dom elements
-            this.cacheDom()
-                //Bind the event listeners
-            this.bindListeners()
-                //The app is not active by default
-            this.itIsActived = false
-        },
-        displayContainer: function() {
-            // Open the bubble
-            this.itIsOpen = true
-                // Animate the bubble
-            this.$draggable.style.transition = 'left 0.2s ease, top 0.2s ease, transform 0.2s ease'
-            this.$draggable.style.right = '5px'
-            this.$draggable.style.top = '5px'
-                // Add the background fade
-            this.$mainContentParent.appendChild(this.$bgFade)
-                // Animate the bubble
-            setTimeout(function() {
-                    bpop.$draggable.style.transition = 'transform 0.2s ease'
-                    bpop.$mainContentWrapper.classList.remove('minimized')
-                    bpop.itIsActived = true
-                }, 200)
-                //  Animate the background fade     
-            this.$fadeBg = this.$mainContentParent.querySelector('.bubble_default__bg')
-            this.$fadeBg.style.opacity = '1'
-        },
-        // This is the drag handler for the drag-and-drop feature.
-        // It is called when the user drags an element.
-        // The element is dragged by changing its position.
-        dragg: function(e) {
-
-            // if the user is dragging the icon
-            if (this.draggActives) {
-                // get the x and y coordinates of the mouse
-                this.x = e.clientX
-                this.y = e.clientY
-
-                // change the position of the draggable icon
-                this.$draggable.style.left = (this.x - 35) + 'px'
-                this.$draggable.style.top = (this.y - 35) + 'px'
-                    // minimize the main content wrapper
-                this.$mainContentWrapper.classList.add('minimized')
-            }
-        },
-        //   This function is called whenever the mouse button is pressed and the
-        //   mouse is moved over the object.
-        draggOn: function(e) {
-            this.draggActives = true // Set this to true so that the drag function knows that it has to handle the mousemove event
-            this.initialStaticalClientX = e.clientX // Save the current x coordinate of the mouse
-            this.initialStaticalClientY = e.clientY // Save the current y coordinate of the mouse
-            window.addEventListener('mousemove', bpop.dragg.bind(this)) // Add an event listener to the window, for the mousemove event, and bind the drag function to the current instance of the boxpop class, so that it can use its properties.
-        },
-        // This function is used to disable dragging of elements.
-        disableDragg: function(e) {
-            // Set the draggActives to false so that the mousemove event won't trigger again
-            this.draggActives = false
-
-            // Record the final statical clientX and clientY
-            this.finalStaticalClientX = e.clientX
-            this.finalStaticalClientY = e.clientY
-
-            // Simulate a click event
-            this.simulatedClick()
-        },
-        // Set aside the current window for later use.
-        setAside: function() {
-            // If the pointer is on the left half of the screen, the widget
-            // will be positioned at the left edge.
-            if (this.finalStaticalClientX < (window.innerWidth / 2)) {
-                this.$draggable.style.left = '-3px'
-            } else {
-                // Otherwise, the widget will be positioned at the right edge.
-                this.$draggable.style.left = 'calc(100% - 67px)'
-            }
-
-            // Disable the draggable element
-            this.itIsActived = false
-
-            //  Set the transition property of the draggable element to change the left property of the element
-            this.$draggable.style.transition = 'left 0.2s ease, transform 0.2s ease'
-
-            //  After 200 ms, set the transition property of the draggable element to change the transform property of the element
-            setTimeout(function() {
-                bpop.$draggable.style.transition = 'transform 0.2s ease'
-            }, 200)
-        },
-        setAsideFromDefault: function() {
-            this.$draggable.style.right = '5px' // Set the right edge of the draggable element to 5 pixels
-            this.$draggable.style.top = '20px' // Set the top edge of the draggable element to 20 pixels
-            this.$mainContentWrapper.classList.add('minimized') // Add the class "minimized" to the main content wrapper
-            this.itIsActived = false // Set the "itIsActived" property to false
-            this.$fadeBg.style.opacity = '0' // Set the opacity of the fade background to 0
-            setTimeout(function() {
-                bpop.$fadeBg.parentElement.removeChild(bpop.$fadeBg) // Remove the fade background after 200 milliseconds
-            }, 200)
-        },
-        // This code simulates a click on the element with id 'id'
-
-        simulatedClick: function() {
-
-            // If the user hasn't moved the mouse, then the popup should open and close
-            if (this.initialStaticalClientX == this.finalStaticalClientX && this.initialStaticalClientY == this.finalStaticalClientY) {
-                // If the popup is open, then close it
-                if (this.itIsActived) {
-                    this.setAsideFromDefault()
-                        // If the popup is closed, then open it
-                } else {
-                    this.displayContainer()
-                }
-            } else {
-                // If the user has moved the mouse, then the popup should open and stay open
-                if (this.itIsActived) {
-                    this.$fadeBg.style.opacity = '0'
-                    setTimeout(function() {
-                        bpop.$fadeBg.parentElement.removeChild(bpop.$fadeBg)
+        var bpop = {
+            // As the name says, it starts on init
+            init: function() {
+                //Render the dom for the app
+                this.renderDom()
+                    //Cache the dom elements
+                this.cacheDom()
+                    //Bind the event listeners
+                this.bindListeners()
+                    //The app is not active by default
+                this.itIsActived = false
+            },
+            displayContainer: function() {
+                // Open the bubble
+                this.itIsOpen = true
+                    // Animate the bubble
+                this.$draggable.style.transition = 'left 0.2s ease, top 0.2s ease, transform 0.2s ease'
+                this.$draggable.style.right = '5px'
+                this.$draggable.style.top = '5px'
+                    // Add the background fade
+                this.$mainContentParent.appendChild(this.$bgFade)
+                    // Animate the bubble
+                setTimeout(function() {
+                        bpop.$draggable.style.transition = 'transform 0.2s ease'
+                        bpop.$mainContentWrapper.classList.remove('minimized')
+                        bpop.itIsActived = true
                     }, 200)
+                    //  Animate the background fade     
+                this.$fadeBg = this.$mainContentParent.querySelector('.bubble_default__bg')
+                this.$fadeBg.style.opacity = '1'
+            },
+            // This is the drag handler for the drag-and-drop feature.
+            // It is called when the user drags an element.
+            // The element is dragged by changing its position.
+            dragg: function(e) {
+
+                // if the user is dragging the icon
+                if (this.draggActives) {
+                    // get the x and y coordinates of the mouse
+                    this.x = e.clientX
+                    this.y = e.clientY
+
+                    // change the position of the draggable icon
+                    this.$draggable.style.left = (this.x - 35) + 'px'
+                    this.$draggable.style.top = (this.y - 35) + 'px'
+                        // minimize the main content wrapper
+                    this.$mainContentWrapper.classList.add('minimized')
+                }
+            },
+            //   This function is called whenever the mouse button is pressed and the
+            //   mouse is moved over the object.
+            draggOn: function(e) {
+                this.draggActives = true // Set this to true so that the drag function knows that it has to handle the mousemove event
+                this.initialStaticalClientX = e.clientX // Save the current x coordinate of the mouse
+                this.initialStaticalClientY = e.clientY // Save the current y coordinate of the mouse
+                window.addEventListener('mousemove', bpop.dragg.bind(this)) // Add an event listener to the window, for the mousemove event, and bind the drag function to the current instance of the boxpop class, so that it can use its properties.
+            },
+            // This function is used to disable dragging of elements.
+            disableDragg: function(e) {
+                // Set the draggActives to false so that the mousemove event won't trigger again
+                this.draggActives = false
+
+                // Record the final statical clientX and clientY
+                this.finalStaticalClientX = e.clientX
+                this.finalStaticalClientY = e.clientY
+
+                // Simulate a click event
+                this.simulatedClick()
+            },
+            // Set aside the current window for later use.
+            setAside: function() {
+                // If the pointer is on the left half of the screen, the widget
+                // will be positioned at the left edge.
+                if (this.finalStaticalClientX < (window.innerWidth / 2)) {
+                    this.$draggable.style.left = '-3px'
+                } else {
+                    // Otherwise, the widget will be positioned at the right edge.
+                    this.$draggable.style.left = 'calc(100% - 67px)'
                 }
 
-                this.setAside()
-            }
-        },
-        // This function binds the listeners that will be used to
-        // react to events.
-        bindListeners: function() {
-            this.$bubbleBody.addEventListener('mousedown', this.draggOn.bind(this))
-            this.$bubbleBody.addEventListener('mouseup', this.disableDragg.bind(this))
-            this.$bgFade.addEventListener('click', this.setAsideFromDefault.bind(this))
-        },
-        // this function renders the DOM for a page
-        renderDom: function() {
-            // create a new div element 
-            this.$bubbleBody = document.createElement('div')
-                // add a class name to the div element 
-            this.$bubbleBody.classList.add('bubble_default__bubble')
-                // add an id to the div element 
-            this.$bubbleBody.setAttribute('id', 'floatingBubble')
+                // Disable the draggable element
+                this.itIsActived = false
 
-            // create a new div element 
-            this.$bubbleBodyContent = document.createElement('div')
-                // add a class name to the div element 
-            this.$bubbleBodyContent.classList.add('minimized')
-            this.$bubbleBodyContent.classList.add('bubble_default__content')
+                //  Set the transition property of the draggable element to change the left property of the element
+                this.$draggable.style.transition = 'left 0.2s ease, transform 0.2s ease'
 
-            // create a new div element 
-            this.$bubbleBodyContentInternal = document.createElement('div')
-                // add a class name to the div element 
-            this.$bubbleBodyContentInternal.classList.add('bubble_default__internal')
-                // append the new div element to the previous div element 
-            this.$bubbleBodyContent.appendChild(this.$bubbleBodyContentInternal)
-            this.$bubbleBodyContentInternal.innerHTML =
-                `<div class="bubble_default__header">
+                //  After 200 ms, set the transition property of the draggable element to change the transform property of the element
+                setTimeout(function() {
+                    bpop.$draggable.style.transition = 'transform 0.2s ease'
+                }, 200)
+            },
+            setAsideFromDefault: function() {
+                this.$draggable.style.right = '5px' // Set the right edge of the draggable element to 5 pixels
+                this.$draggable.style.top = '20px' // Set the top edge of the draggable element to 20 pixels
+                this.$mainContentWrapper.classList.add('minimized') // Add the class "minimized" to the main content wrapper
+                this.itIsActived = false // Set the "itIsActived" property to false
+                this.$fadeBg.style.opacity = '0' // Set the opacity of the fade background to 0
+                setTimeout(function() {
+                    bpop.$fadeBg.parentElement.removeChild(bpop.$fadeBg) // Remove the fade background after 200 milliseconds
+                }, 200)
+            },
+            // This code simulates a click on the element with id 'id'
+
+            simulatedClick: function() {
+
+                // If the user hasn't moved the mouse, then the popup should open and close
+                if (this.initialStaticalClientX == this.finalStaticalClientX && this.initialStaticalClientY == this.finalStaticalClientY) {
+                    // If the popup is open, then close it
+                    if (this.itIsActived) {
+                        this.setAsideFromDefault()
+                            // If the popup is closed, then open it
+                    } else {
+                        this.displayContainer()
+                    }
+                } else {
+                    // If the user has moved the mouse, then the popup should open and stay open
+                    if (this.itIsActived) {
+                        this.$fadeBg.style.opacity = '0'
+                        setTimeout(function() {
+                            bpop.$fadeBg.parentElement.removeChild(bpop.$fadeBg)
+                        }, 200)
+                    }
+
+                    this.setAside()
+                }
+            },
+            // This function binds the listeners that will be used to
+            // react to events.
+            bindListeners: function() {
+                this.$bubbleBody.addEventListener('mousedown', this.draggOn.bind(this))
+                this.$bubbleBody.addEventListener('mouseup', this.disableDragg.bind(this))
+                this.$bgFade.addEventListener('click', this.setAsideFromDefault.bind(this))
+            },
+            // this function renders the DOM for a page
+            renderDom: function() {
+                // create a new div element 
+                this.$bubbleBody = document.createElement('div')
+                    // add a class name to the div element 
+                this.$bubbleBody.classList.add('bubble_default__bubble')
+                    // add an id to the div element 
+                this.$bubbleBody.setAttribute('id', 'floatingBubble')
+
+                // create a new div element 
+                this.$bubbleBodyContent = document.createElement('div')
+                    // add a class name to the div element 
+                this.$bubbleBodyContent.classList.add('minimized')
+                this.$bubbleBodyContent.classList.add('bubble_default__content')
+
+                // create a new div element 
+                this.$bubbleBodyContentInternal = document.createElement('div')
+                    // add a class name to the div element 
+                this.$bubbleBodyContentInternal.classList.add('bubble_default__internal')
+                    // append the new div element to the previous div element 
+                this.$bubbleBodyContent.appendChild(this.$bubbleBodyContentInternal)
+                this.$bubbleBodyContentInternal.innerHTML =
+                    `<div class="bubble_default__header">
                     <div class="bubble_default__title">
                         Votre Profil
                     </div>
@@ -255,26 +255,33 @@ document.addEventListener('DOMContentLoaded', function() {
                     `
 
 
-            this.$bubbleBodyParent = document.createElement('section') // Create a new HTML element of type section
-            this.$bubbleBodyParent.setAttribute('id', 'floatingBubbleContainer') // Set the ID of the new element to floatingBubbleContainer
+                this.$bubbleBodyParent = document.createElement('section') // Create a new HTML element of type section
+                this.$bubbleBodyParent.setAttribute('id', 'floatingBubbleContainer') // Set the ID of the new element to floatingBubbleContainer
 
 
-            this.$bubbleBodyParent.appendChild(this.$bubbleBody) // Add the bubble body to the new section
-            this.$bubbleBodyParent.appendChild(this.$bubbleBodyContent) // Add the bubble body content to the new section
+                this.$bubbleBodyParent.appendChild(this.$bubbleBody) // Add the bubble body to the new section
+                this.$bubbleBodyParent.appendChild(this.$bubbleBodyContent) // Add the bubble body content to the new section
 
-            document.querySelector('body').appendChild(this.$bubbleBodyParent) // Add the new section to the body of the page
+                document.querySelector('body').appendChild(this.$bubbleBodyParent) // Add the new section to the body of the page
 
-            this.$bgFade = document.createElement('span') // Create a new HTML element of type span
-            this.$bgFade.classList.add('bubble_default__bg') // Add the class bubble_default__bg to the span
-        },
-        // Function that caches the DOM elements that are used in the code
-        cacheDom: function() {
-            this.$mainContentParent = document.querySelector('#floatingBubbleContainer')
-            this.$mainContentWrapper = this.$mainContentParent.querySelector('.bubble_default__content')
-            this.$draggable = this.$mainContentParent.querySelector('.bubble_default__bubble')
+                this.$bgFade = document.createElement('span') // Create a new HTML element of type span
+                this.$bgFade.classList.add('bubble_default__bg') // Add the class bubble_default__bg to the span
+            },
+            // Function that caches the DOM elements that are used in the code
+            cacheDom: function() {
+                this.$mainContentParent = document.querySelector('#floatingBubbleContainer')
+                this.$mainContentWrapper = this.$mainContentParent.querySelector('.bubble_default__content')
+                this.$draggable = this.$mainContentParent.querySelector('.bubble_default__bubble')
+            }
+
         }
 
-    }
-
-    bpop.init()
-})
+        bpop.init()
+    })
+    /*------------------errors------------------*/
+function closePopup() {
+    // 1. Get the jQuery object for the popup
+    let popup = $('#error_container');
+    // 2. Set the popup's display property to none
+    popup.css('display', 'none');
+}

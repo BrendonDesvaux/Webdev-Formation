@@ -24,7 +24,7 @@
     </li>
     <li class="nav-item">
         <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-cubes mr-3 text-danger fa-fw"></i> Must read
+            <i class="fa fa-cubes mr-3 text-danger fa-fw"></i> Profil
         </a>
     </li>
     <li class="nav-item">
