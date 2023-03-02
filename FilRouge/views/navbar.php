@@ -1,7 +1,7 @@
 <!-- Vertical navbar -->
 <div class="vertical-nav bg-dark" id="sidebar">
 
-<a href="index.php">
+<a href="./">
     <div class="py-4 px-3 mb-4 bg-dark">
         <div class="media-body">
             <img class="mb-0" src="img/logo.png" width="80%">
@@ -13,23 +13,23 @@
 
 <ul class="nav flex-column bg-dark mb-0">
     <li class="nav-item">
-        <a href="#" class="nav-link text-light font-italic bg-dark">
+        <a href="mes-creations" class="nav-link text-light font-italic bg-dark">
             <i class="fa fa-th-large mr-3 text-danger fa-fw"></i> Mes creations
         </a>
     </li>
     <li class="nav-item">
-        <a href="pages/galery.php" class="nav-link text-light font-italic">
+        <a href="galery" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-danger fa-fw"></i> Creation du peuple
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-cubes mr-3 text-danger fa-fw"></i> Profil
+        <a href="favoris" class="nav-link text-light font-italic">
+            <i class="fa fa-cubes mr-3 text-danger fa-fw"></i> Mes favoris
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic">
-            <i class="fa fa-picture-o mr-3 text-danger fa-fw"></i> Surprise
+        <a href="creation" class="nav-link text-light font-italic">
+        <button type="button" class="btn-red">Ecrivez votre histoire !</button>
         </a>
     </li>
 </ul>
@@ -38,23 +38,23 @@
 
 <ul class="nav flex-column bg-dark mb-0">
     <li class="nav-item">
-        <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-area-chart mr-3 text-danger fa-fw"></i> Moi
+        <a href="profil" class="nav-link text-light font-italic">
+            <i class="fa fa-area-chart mr-3 text-danger fa-fw"></i> Mon profil
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-bar-chart mr-3 text-danger fa-fw"></i> Mes livres
+        <a href="webmaster" class="nav-link text-light font-italic">
+            <i class="fa fa-bar-chart mr-3 text-danger fa-fw"></i> Createur du site
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-pie-chart mr-3 text-danger fa-fw"></i> Une idée
+        <a href="features" class="nav-link text-light font-italic">
+            <i class="fa fa-pie-chart mr-3 text-danger fa-fw"></i> Nouvelles Features
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-line-chart mr-3 text-danger fa-fw"></i> Une autre
+        <a href="contact" class="nav-link text-light font-italic">
+            <i class="fa fa-line-chart mr-3 text-danger fa-fw"></i> Contactez un administateur
         </a>
     </li>
 </ul>

@@ -285,3 +285,52 @@ function closePopup() {
     // 2. Set the popup's display property to none
     popup.css('display', 'none');
 }
+/*------------------file-display------------------*/
+const fileInput = document.getElementById("formFileMultiple");
+const imageList = document.getElementById("imageList");
+
+fileInput.addEventListener("change", function() {
+    // Supprime tous les éléments enfants de la div imageList.
+    while (imageList.firstChild) {
+        imageList.removeChild(imageList.firstChild);
+    }
+
+    // Obtient une liste des fichiers sélectionnés.
+    const files = fileInput.files;
+
+    // Vérifie qu'aucun plus de deux fichiers n'ont été sélectionnés.
+    if (files.length > 2) {
+        alert("Vous ne pouvez sélectionner que deux fichiers maximum.");
+
+        // Supprime automatiquement tous les fichiers excédentaires.
+        while (files.length > 2) {
+            files.pop();
+        }
+
+        // Réinitialise la valeur du champ de fichier avec la liste de fichiers filtrée.
+        fileInput.value = "";
+        return;
+    }
+
+    // Affiche l'image de chaque fichier sélectionné dans la div imageList.
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+
+        // Vérifie que le fichier sélectionné est une image.
+        if (!file.type.startsWith("image/")) {
+            alert("Veuillez sélectionner uniquement des fichiers image.");
+            fileInput.value = "";
+            return;
+        }
+
+        // Crée une URL d'objet blob pour l'image.
+        const imageUrl = URL.createObjectURL(file);
+
+        // Crée un élément image pour afficher l'image.
+        const image = document.createElement("img");
+        image.classList.add("obj_img");
+        image.src = imageUrl;
+        imageList.appendChild(image);
+
+    }
+});

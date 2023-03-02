@@ -7,6 +7,10 @@ require_once 'controller/bookController.php';
 require_once 'php/userDB.php';
 require_once 'php/user_class.php';
 require_once 'controller/userController.php';
+require_once 'controller/viewController.php';
+
+
+
 // $json = file_get_contents('json/books.json');
 // $bookJson = json_decode($json);
 ?>
@@ -23,15 +27,40 @@ require_once 'controller/userController.php';
 </head>
 
 <body>
-    <!-- afficher via ?id=x dans l'url -->
-                <?php 
-        // Check if an id is set in the url
-        if(isset($_GET['id'])){
-            // If an id is set, display the book with this id
-            afficherUnBook($_GET['id']);
-        }else{
-            // If no id is set, display all books
-            afficherUsers();
+    <?php 
+        // Charger le contrôleur approprié en fonction de la route demandée
+        $current_url = $_SERVER['REQUEST_URI'];
+            if(isset($current_url)){
+            switch ($current_url) {
+                case '/filrouge/':
+                    homeController();
+                    break;
+                case '/filrouge/book':
+                    afficherUnBook(5);
+                    break;
+                case '/filrouge/galery':
+                    galeryController();
+                    break;
+                case '/filrouge/mes-creations':
+                    creationController();
+                    break;
+                case '/filrouge/favoris':
+                    favorisController();
+                    break;
+                case '/filrouge/creation':
+                    writingController();
+                    break;
+                case '/filrouge/creation2':
+                    writingControllerSecond();
+                    break;
+                case '/filrouge/profil':
+                    profilController();
+                    break;
+                default:
+                    http_response_code(404);
+                    fofController();
+                    break;
+            }
         }
     ?>
 </body>

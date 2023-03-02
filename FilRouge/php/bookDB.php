@@ -9,7 +9,7 @@ class BookDB{
             $resultBook = $stmt->fetchAll(); 
             $listeBooks = new ArrayObject(); // Create a new ArrayObject
             foreach($resultBook as $value){ // For each book in the database
-                $book = new Book($value['id'],$value['title'], $value['author'], $value['pages'], $value['chapterTitle'], $value['chapterContent'], $value['resume']);
+                $book = new Book($value['id'],$value['title'], $value['author'], $value['pages'], $value['chapterTitle'], $value['chapterContent'], $value['resume'], $value['cover']);
                 // var_dump($book);
                 $listeBooks -> append($book); // Add the book to the array
             }
@@ -36,7 +36,7 @@ class BookDB{
         
         // If value is not false then we create a new book
         if ($resultBook) {
-            $book = new Book($resultBook['id'],$resultBook['title'], $resultBook['author'], $resultBook['pages'], $resultBook['chapterTitle'], $resultBook['chapterContent'], $resultBook['resume']);
+            $book = new Book($resultBook['id'],$resultBook['title'], $resultBook['author'], $resultBook['pages'], $resultBook['chapterTitle'], $resultBook['chapterContent'], $resultBook['resume'], $resultBook['cover']);
             return $book;
         } else {
             return false;

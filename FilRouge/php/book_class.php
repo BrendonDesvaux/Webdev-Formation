@@ -7,8 +7,9 @@ class Book {
     public String $chapterTitle; // The title of the first chapter of the book
     public String $chapterContent; // The content of the first chapter of the book
     public String $resume; // The resume of the book
+    public String $cover; //the cover of the book
 
-    public function __construct($id, $title, $author, $pages, $chapterTitle, $chapterContent, $resume) {
+    public function __construct($id, $title, $author, $pages, $chapterTitle, $chapterContent, $resume, $cover) {
         $this -> id = $id;
         $this->title = htmlentities($title); // htmlentities() is used to prevent XSS attacks and add accents
         $this->author = $author;
@@ -16,6 +17,7 @@ class Book {
         $this->chapterTitle = $chapterTitle;
         $this->chapterContent = $chapterContent;
         $this->resume = $resume;
+        $this->cover = $cover;
     }
 
     public function __toString() {

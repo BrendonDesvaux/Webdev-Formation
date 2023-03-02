@@ -1,0 +1,164 @@
+.container_main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12%;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #f8f9fa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title span {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+
+/*-----carousel-----*/
+
+.carousel-img {
+    height: 350px;
+    width: 100%;
+}
+
+.carousel-item img {
+    margin: auto;
+}
+
+@media (min-width: 1281px) {
+    .container_main {
+        margin-top: 0%;
+    }
+    .carousel-img {
+        height: 350px;
+        width: 20%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .container_main {
+        margin-top: 0%;
+    }
+    .carousel-img {
+        height: 450px;
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
+    .container_main {
+        margin-top: 0%;
+    }
+    .carousel-img {
+        height: 450px;
+        width: 40%;
+    }
+}
+
+
+/*--fin-carousel--*/
+
+
+/*-----browse-----*/
+
+.container_bandeau {
+    width: 100%;
+    height: 100px;
+    background-color: #202225;
+    padding-left: 2%;
+    padding-right: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.browse {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #f8f9fa;
+    text-align: left;
+}
+
+.btn-red {
+    background-color: #00000000;
+    border: 2px solid #dc3545;
+    border-radius: 5%;
+    padding: 15px 20px;
+    color: #dc3545;
+}
+
+.btn-red:hover {
+    background-color: #dc3545;
+    color: #f8f9fa;
+}
+
+.btn-red:hover::after {
+    content: ' >';
+}
+
+.btn-green {
+    background-color: #00000000;
+    border: 2px solid #156835;
+    border-radius: 5%;
+    padding: 15px 20px;
+    color: #fff;
+    width: 100%;
+}
+
+.btn-green:hover {
+    background-color: #156835;
+    color: #f8f9fa;
+}
+
+.btn-green:hover::after {
+    content: ' >';
+}
+
+
+/*---fin--browse---*/
+
+#news {
+    display: none;
+}
+
+#new {
+    text-align: center;
+    color: #f8f9fa;
+    margin-top: 18PX;
+}
+
+.new_books {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18PX;
+}
+
+@media screen and (min-width: 768px) {
+    #news {
+        display: block;
+    }
+    .new_books {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .new_books>.book {
+        width: 150px;
+        height: 200px;
+    }
+}

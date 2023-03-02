@@ -1,0 +1,44 @@
+.description {
+    margin-top: 2%;
+}
+
+.text_description {
+    height: 70vh !important;
+}
+
+.mb-3 label {
+    color: white;
+}
+
+.obj_img {
+    height: 20vh;
+}
+
+#imageList {
+    background-color: white;
+    height: 52vh;
+    width: 100%;
+    margin-top: 2%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2%;
+}
+
+#suivant {
+    margin-top: 4%;
+}
+
+@media (min-width: 320px) and (max-width: 1430px) {
+    .description {
+        flex-direction: column;
+    }
+    .text_description {
+        height: 50vh !important;
+    }
+    .titleW {
+        margin-top: 12%;
+    }
+}

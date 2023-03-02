@@ -5,6 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #36393f !important;
     overflow-y: scroll !important;
+    position: relative;
 }
 
 body::-webkit-scrollbar {
@@ -18,6 +19,10 @@ i {
 a:hover {
     text-decoration: underline;
     text-decoration-color: #7f181a !important;
+}
+
+main {
+    height: 97.4vh;
 }
 
 
@@ -307,16 +312,20 @@ a:hover {
 
 #sidebar.active {
     margin-left: 0;
+    z-index: 3;
 }
 
 #content {
     width: 100%;
     margin: 0;
+    height: 100vh;
+    position: relative;
 }
 
 #content.active {
     margin-left: 17rem;
     width: calc(100% - 17rem);
+    height: 100%;
 }
 
 .return {
@@ -665,6 +674,16 @@ a:hover {
 
 /*----------------début-bubble--------------------*/
 
+#floatingBubbleContainer {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    #floatingBubbleContainer {
+        display: block;
+    }
+}
+
 .bubble_default__bubble {
     transition: transform 0.2s ease;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
@@ -746,6 +765,10 @@ a:hover {
     overflow: auto;
 }
 
+.item_ {
+    color: white;
+}
+
 .bubble_default__internal::-webkit-scrollbar {
     display: none;
 }
@@ -796,6 +819,13 @@ a:hover {
     background-color: white;
     border-radius: 0.5rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tabs2 {
+    width: 100%;
+    background-color: #40444a;
+    border-radius: 0.5rem;
+    color: white;
 }
 
 .tab-control {
