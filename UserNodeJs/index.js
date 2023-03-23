@@ -37,7 +37,29 @@ app.post('/users', (req, res) => {
 //It then returns the user in JSON format.
 
 app.get('/users/:id', (req, res) => {
+        const id = parseInt(req.params.id)
+        const user = userData.find(user => user.id === id)
+        res.status(200).json(user)
+    })
+    // Delete a user
+app.delete('/users/:id', (req, res) => {
+    // Get the user id from the request
     const id = parseInt(req.params.id)
+        // Find the user in the array
+    let user = userData.find(user => user.id === id)
+        // Remove the user from the array
+    userData.splice(userData.indexOf(user), 1)
+        // Send the updated user array back to the client
+    res.status(200).json(userData)
+})
+app.put('/users/:id', (req, res) => {
+    // Get the user id from the request
+    const id = parseInt(req.params.id)
+        // Find the user in the array
     const user = userData.find(user => user.id === id)
-    res.status(200).json(user)
+        // Update the user
+    user.identifiant = req.body.user
+    user.mdp = req.body.mdp
+        // Send the updated user array back to the client
+    res.status(200).json(userData)
 })
