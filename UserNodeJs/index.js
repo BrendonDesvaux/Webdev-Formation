@@ -39,5 +39,5 @@ app.post('./users', (req, res) => {
 app.get('/users/:id', (req, res) => {
     const id = parseInt(req.params.id)
     const user = userData.find(users => user.id === id)
-    res.status(200).json(userData)
+    res.status(200).json(user)
 })
