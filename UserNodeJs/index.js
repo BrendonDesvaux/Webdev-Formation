@@ -28,7 +28,7 @@ app.get('/users', (req, res) => {
     })
     // POST request to add a new user
 app.post('/users', (req, res) => {
-    users.push(req.body)
+    userData.push(req.body)
     res.status(200).json(userData)
 })
 
