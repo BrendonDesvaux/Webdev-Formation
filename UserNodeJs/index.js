@@ -27,7 +27,7 @@ app.get('/users', (req, res) => {
         res.status(200).json(userData)
     })
     // POST request to add a new user
-app.post('./users', (req, res) => {
+app.post('/users', (req, res) => {
     users.push(req.body)
     res.status(200).json(userData)
 })
