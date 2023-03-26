@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello JouerController!{% endblock %}
+
+{% block body %}
+{%for aventure in aventures %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{aventure.Titre}}</h5>
+            <a href="#"  class="btn btn-primary">Jouer</a>
+        </div>
+    </div>
+{%else%}
+    <p>Il n'y a pas d'aventures</p>
+{% endfor %}
+
+{% endblock %}
